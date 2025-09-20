@@ -11,10 +11,12 @@ import React, { Component } from "react";
 
 class UserInfo extends Component {
     render() {
+        const { user } = this.props;
         return (
             <div>
-                <p><strong>Tên:</strong> {this.props.username}</p>
-                <p><strong>Email:</strong> {this.props.email}</p>
+                <p><strong>Tên:</strong> {user.FullName}</p>
+                <p><strong>Email:</strong> {user.Email}</p>
+                <p><strong>Phone:</strong> {user.PhoneNumber}</p>
             </div>
         );
     }

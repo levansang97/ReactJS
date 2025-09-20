@@ -1,16 +1,16 @@
-import logo from './logo.svg';
 import './App.scss';
-import LoginForm from '../components/LoginForm.js';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import LoginForm from "./auth/LoginForm";
+import RegisterForm from "./auth/RegisterForm";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <LoginForm />
-      </header>
-    </div>
-
+    <Router>
+      <Routes>
+        <Route path="/" element={<LoginForm />} />
+        <Route path="/register" element={<RegisterForm />} />
+      </Routes>
+    </Router>
   );
 }
 
